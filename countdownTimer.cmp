@@ -7,7 +7,8 @@
             	<lightning:layoutitem size="12" padding="around-small">
                     <lightning:input type="number" value="{!v.minutes}" label="Enter target duration of focus time in minutes." onchange="{!c.onMinutesChange}"/>
                 </lightning:layoutitem>
-        		<img src="{!$Resource.melting_clocks}" alt="Salvador Dali Image"/>
+        	    //Use the image tag to insert an image after a .jpeg file has uploaded and saved to a static resource.
+                <img src="{!$Resource.melting_clocks}" alt="Salvador Dali Image"/>
                 <lightning:layoutitem size="12" padding="around-small">
                     <div class="slds-align_absolute-center" style="background-color:yellow;font-size:35px;color:green">
                 		{!v.countDownMinutes} MINUTES : {!v.countDownSeconds} SECONDS 
