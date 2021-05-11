@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global"> 
+    <aura:attribute name="minutes" type="Integer"/> 
+    <aura:attribute name="countDownMinutes" type="Integer" default="0"/>
+    <aura:attribute name="countDownSeconds" type="Integer" default="0"/>
+        <lightning:card iconName="standard:date_time" title="Countdown Timer">
+            <lightning:layout multipleRows="true">
+            	<lightning:layoutitem size="12" padding="around-small">
+                    <lightning:input type="number" value="{!v.minutes}" label="Enter target duration of focus time in minutes." onchange="{!c.onMinutesChange}"/>
+                </lightning:layoutitem>
+        		<img src="{!$Resource.melting_clocks}" alt="Salvador Dali Image"/>
+                <lightning:layoutitem size="12" padding="around-small">
+                    <div class="slds-align_absolute-center" style="background-color:yellow;font-size:35px;color:green">
+                		{!v.countDownMinutes} MINUTES : {!v.countDownSeconds} SECONDS 
+                    </div>
+                </lightning:layoutitem>
+                <lightning:layoutitem size="12" padding="around-small">
+                    <div class="slds-align_absolute-center" style="font-size:18px">
+                        <lightning:button name="starttime" label="Start" onclick="{!c.onStartTime}"/>
+                    </div> 
+                </lightning:layoutitem>
+            </lightning:layout>
+        </lightning:card>
+</aura:component>
